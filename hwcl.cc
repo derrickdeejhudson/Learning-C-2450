@@ -23,7 +23,7 @@ void printTriangleFor(int width)
 {
     i = 0;
     j = 0;
-    for (j = 0; j, height; j++)
+    for (j = 0; j < height; j++)
     {
         for (i = 0; i < width; i++)
             printf("-");
