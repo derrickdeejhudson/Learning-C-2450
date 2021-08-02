@@ -9,6 +9,6 @@ void printTriangleFor(int);
 
 int main()
 {
-    printRectangleWhile(1, 6);
-    printTriangleFor(7);
+    printRectangleWhile(0, 0);
+    printTriangleFor(5);
 }
