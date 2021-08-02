@@ -8,12 +8,12 @@ int i, j;
 void printRectangleWhile(int width, int height)
 {
     i = 1;
-    while (i <= width)
+    while (i <= height)
     {
         j = 1;
-        while (j <= height)
+        while (j <= width)
         {
-            if (i == 1 || i == width || j == 1 || j == height)
+            if (i == 1 || i == height || j == 1 || j == width)
                 printf("+");
             else
                 printf("-");
@@ -26,12 +26,18 @@ void printRectangleWhile(int width, int height)
 
 void printTriangleFor(int width)
 {
-    //i = 0;
-    //j = 0;
+    //i == 1 ||
     for (i = 1; i <= width; i++)
     {
-        for (j = 1; j <= width; j++)
-            printf("-");
+        for (j = i; j < width; j++)
+            printf(" ");
+        for (j = 1; j <= i; j++)
+        {
+            if (i == width || j == 1 || i == j)
+                printf("+");
+            else
+                printf("-");
+        }
         printf("\n");
     }
 }
