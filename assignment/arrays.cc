@@ -46,7 +46,23 @@ int countRangeValues(double arr[], int numItems, double entry)
 
 double getMaxAbsolute(double arr[], int numItems)
 {
-    return 1.0;
+    int highest = 0;
+    for (int i = 0; i < numItems; i++)
+    {
+        if (arr[i] > 0 && arr[i] >= arr[highest] && arr[i] >= (arr[highest] * -1))
+        {
+            highest = i;
+        }
+        if (arr[i] < 0 && arr[i] <= arr[highest] && arr[i] <= (arr[highest] * -1))
+        {
+            highest = i;
+        }
+        else
+        {
+        }
+    }
+    //printf("%f\n", arr[highest]);
+    return arr[highest];
 }
 
 int countInverses(int arr[], int numItems)
