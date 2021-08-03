@@ -96,7 +96,7 @@ int countInverses(int arr[], int numItems)
     return count;
 }
 
-double getMaxCount(double arr[], int numItems)
+int getMaxCount(double arr[], int numItems)
 {
     double entry = getMaxAbsolute(arr, numItems);
     int a = countRangeValues(arr, numItems, entry);
