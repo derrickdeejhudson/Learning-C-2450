@@ -4,7 +4,7 @@ double getPositiveAverage(double arr[], int numItems)
 {
     int count = 0;
     double sum = 0.0;
-    printf("%f\n", sum);
+    //printf("%f\n", sum);
     for (int i = 0; i < numItems; i++)
     {
         if (arr[i] > 0)
@@ -40,7 +40,7 @@ int countRangeValues(double arr[], int numItems, double entry)
     }
     //printf("%d\n", count);
     int n = numItems - count;
-    printf("%d\n", n);
+    //printf("%d\n", n);
     return n;
 }
 
@@ -79,11 +79,13 @@ int countInverses(int arr[], int numItems)
                 count++;
             }
 
-    printf("%d\n", count);
+    //printf("%d\n", count);
     return count;
 }
 
 double getMaxCount(double arr[], int numItems)
 {
-    return 1.0;
+    double entry = getMaxAbsolute(arr, numItems);
+    int a = countRangeValues(arr, numItems, entry);
+    return a;
 }
