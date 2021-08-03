@@ -67,7 +67,20 @@ double getMaxAbsolute(double arr[], int numItems)
 
 int countInverses(int arr[], int numItems)
 {
-    return 0;
+    int count = 0;
+
+    for (int i = 0; i < numItems; i++)
+        for (int j = i + 1; j < numItems; j++)
+            if (arr[i] + arr[j] == 0 && arr[i] != 0 && arr[j] != 0)
+            {
+                //printf("%d\n", count);
+                arr[i] = 0;
+                arr[j] = 0;
+                count++;
+            }
+
+    printf("%d\n", count);
+    return count;
 }
 
 double getMaxCount(double arr[], int numItems)
