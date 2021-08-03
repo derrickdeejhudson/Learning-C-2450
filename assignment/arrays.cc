@@ -62,13 +62,19 @@ double getMaxAbsolute(double arr[], int numItems)
             target = arr[i] * -1.0;
         }
 
-        else if (target > inverse || (target == inverse && target > highest))
+        if (target == inverse && target > highest)
+        {
+            highest = arr[i];
+            inverse = arr[i];
+        }
+
+        else if (target > inverse) 
         {
             highest = arr[i];
             inverse = arr[i];
         }
     }
-
+    printf("%f\n", highest);
     return highest;
 }
 
