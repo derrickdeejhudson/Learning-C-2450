@@ -1,7 +1,8 @@
 #include <stdio.h>
 
-double getPositiveAverage(double myArray[], int numItems)
+double getPositiveAverage(double arr[], int numItems)
 {
+    return 1.0;
 }
 
 int countRangeValues(double arr[], int numItems, double entry)
@@ -10,19 +11,31 @@ int countRangeValues(double arr[], int numItems, double entry)
     for (int i = 0; i < numItems; i++)
     {
         if (arr[i] <= (entry - 0.5) || arr[i] > (entry + 0.5))
+        {
             count++;
+            //printf("%d\n", count);
+        }
+        else
+        {
+        }
     }
-    return count;
+    //printf("%d\n", count);
+    int n = numItems - count;
+    printf("%d\n", n);
+    return n;
 }
 
-double getMaxAbsolute(double[], int)
+double getMaxAbsolute(double arr[], int numItems)
 {
+    return 1.0;
 }
 
-int countInverses(int[], int)
+int countInverses(int arr[], int numItems)
 {
+    return 0;
 }
 
-double getMaxCount(double[], int)
+double getMaxCount(double arr[], int numItems)
 {
+    return 1.0;
 }
